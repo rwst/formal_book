@@ -223,8 +223,8 @@ theorem infinity_of_primes₄ : Tendsto π atTop atTop := by
       Real.log x ≤ ∑ k in Icc 1 n, (k : ℝ)⁻¹ := by sorry
       _ ≤ (∑' m : (S₁ x), (m : ℝ)⁻¹) := by sorry
       _ ≤ (∏ p in primesBelow ⌊x⌋.natAbs, (∑' k : ℕ, (p ^ k : ℝ)⁻¹)) := by sorry
-      _ ≤ (∏ k in Icc 1 (primeCountingReal x), (nth Nat.Prime k) / ((nth Nat.Prime k) - 1)) := by sorry
-      _ ≤ (∏ k in Icc 1 (primeCountingReal x), (k + 1) / k) := by sorry
+      _ ≤ (∏ k in Icc 1 (primeCountingReal x), (nth Nat.Prime k : ℝ) / ((nth Nat.Prime k) - 1)) := by sorry
+      _ ≤ (∏ k in Icc 1 (primeCountingReal x), (k + 1 : ℝ) / k) := by sorry
       _ ≤ primeCountingReal x + 1 := by sorry
   sorry
 
